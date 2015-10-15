@@ -1,1 +1,11 @@
 @import 'variables';
+
+#straight-border{
+  position: absolute;
+  display: inline-block;
+  bottom: 0px;
+  left: 0px;
+  height:20px;
+  width:30vw;
+  background-color: red;
+}

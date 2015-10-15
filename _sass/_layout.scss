@@ -4,7 +4,8 @@
 .site-header {
     border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
-    min-height: 56px;
+    min-height: 75px;
+    width: 40%;
     padding: 0 2vw 0 2vw;
 
     // Positioning context for the mobile navigation icon
@@ -12,11 +13,12 @@
 }
 
 .site-title {
-    font-size: 26px;
+    font-size: 34pt;
     line-height: 56px;
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
+    font-family: 'Alfa Slab One', sans-serif;
 
     &,
     &:visited {
@@ -28,9 +30,9 @@
     float: right;
     line-height: 56px;
 
-    .menu-icon {
-        display: none;
-    }
+    // .menu-icon {
+    //     display: none;
+    // }
 
     .page-link {
         color: $text-color;
@@ -42,7 +44,7 @@
         }
     }
 
-    @include media-query($on-palm) {
+    // @include media-query($on-palm) {
         position: absolute;
         top: 9px;
         right: 30px;
@@ -84,7 +86,7 @@
             display: block;
             padding: 5px 10px;
         }
-    }
+    // }
 }
 
 
