@@ -7,20 +7,16 @@ layout: home
     <h1 class="banner-title">
   </div>
 
-  <h1 class="page-heading">Posts</h1>
 
-  <ul class="post-list">
+  <div class="posts">
     {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
+      <div class="card">
+        <a class="link-overlay" href="{{ post.url | prepend: site.baseurl }}" style="background-image: url({{post.image}});background-position:{{post.bgpos}}">{{post.title}}</a>
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
       </li>
     {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  </div>
 
 </div>

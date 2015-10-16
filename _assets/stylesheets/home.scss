@@ -1,11 +1,51 @@
 @import 'variables';
 
-#straight-border{
-  position: absolute;
-  display: inline-block;
-  bottom: 0px;
-  left: 0px;
-  height:20px;
-  width:30vw;
-  background-color: red;
+.card{
+  position: relative;
+  width: 300px;
+  height: 400px;  
 }
+
+.link-overlay{
+  display: block;
+  background-size: cover;
+  text-indent: 100%;
+  white-space: nowrap;
+  top: 0;
+  left: 0;
+  width:300px;
+  height: 100%;
+  overflow: hidden;
+  &:hover{
+    & + h2 a{
+      background-color: $dark-orange;
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+.post-link{
+  // display: inline;
+  font-family: 'Nixie One', sans-serif;
+  position: absolute;
+  background-color: $light-orange;
+  color: black;
+  padding: 1%;
+  top: 5%;
+  left: 2vw;
+  transition: all 0.1s ease-in-out;
+  &:hover{
+    background-color: $dark-orange;
+    text-decoration: none;
+    color: white;
+  }
+  &:visited{
+    color: black;
+    &:hover{
+      color: white;
+    }
+  }
+}
+
+
