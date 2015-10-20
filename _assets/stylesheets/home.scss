@@ -1,9 +1,21 @@
 @import 'variables';
 
 .card{
+  display: inline-block;
   position: relative;
   width: 300px;
-  height: 400px;  
+  height: 400px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+#recent{
+  vertical-align: top;
+  box-sizing: border-box;
+  padding-left: 10px;
+  // padding-top: 5%;
+  font-family: 'Nixie One', sans-serif;
+  background-color: #f2efef;
 }
 
 .link-overlay{
@@ -18,7 +30,7 @@
   overflow: hidden;
   &:hover{
     & + h2 a{
-      background-color: $dark-orange;
+      background-color: $light-orange;
       text-decoration: none;
       color: white;
     }
@@ -26,17 +38,16 @@
 }
 
 .post-link{
-  // display: inline;
   font-family: 'Nixie One', sans-serif;
   position: absolute;
-  background-color: $light-orange;
+  background-color: $dark-orange;
   color: black;
   padding: 1%;
   top: 5%;
-  left: 2vw;
+  left: 15px;
   transition: all 0.1s ease-in-out;
   &:hover{
-    background-color: $dark-orange;
+    background-color: $light-orange;
     text-decoration: none;
     color: white;
   }
@@ -48,4 +59,40 @@
   }
 }
 
+.recent-heading{
+  position: relative;
+  background-color: $light-orange;
+  width: 60%;
+  padding-left: 1% ;
+  top: 5%;
+}
+
+.recent-posts{
+  display: inline;
+  width: 50%;
+  list-style-type: none;
+  & li{
+    width: 50%;
+    & a{
+      color: black;
+      &:visited{
+        color: $dark-orange;
+      }
+    }
+  }
+}
+
+.quote{
+  vertical-align: top;
+  font-family: 'Nixie One', sans-serif;
+  background-color: #dddddd;
+  & p{
+    text-align: center;
+    position: relative;
+    top: 20%;
+    vertical-align: middle;
+    font-size: 24pt;
+    background-color: $light-orange;
+  }
+}
 

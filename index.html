@@ -9,13 +9,30 @@ layout: home
 
 
   <div class="posts">
+    <div class="card" id="recent">
+      <h2 class="recent-heading">
+        Recent Posts
+      </h2>
+      <ul class="recent-posts">
+      {% for post in site.posts %}
+        <li>
+          <a class="recent-link" href=
+          "{{post.url | prepend:site.baseurl}}">
+          {{post.title}}</a>
+         </li>
+      {% endfor %}
+      </ul>
+    </div>
+    <div class="card quote">
+      <p class="quote">
+        "This is a quote card. It contains quite a long quote."
+      </p>
+    </div>
     {% for post in site.posts %}
       <div class="card">
         <a class="link-overlay" href="{{ post.url | prepend: site.baseurl }}" style="background-image: url({{post.image}});background-position:{{post.bgpos}}">{{post.title}}</a>
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
+        <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+      </div>
     {% endfor %}
   </div>
 

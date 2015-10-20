@@ -3,8 +3,23 @@
 .signup{
   display: inline-block;
   margin-left: 4vw;
+  font-family: 'Nixie One', sans-serif;
+  
+  & input{
+  font-family: inherit !important;
+  }
+}
+
+#signup-submit{
+      font-family: inherit !important;
+}
+
+.signup-text{
+  margin-top: 2vh;
+  background-color: $light-orange;
 }
 
 .asterix{
   color: $dark-orange;
 }
+
