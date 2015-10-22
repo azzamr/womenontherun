@@ -1,18 +1,34 @@
 @import 'variables';
 
+input{
+  &:focus{
+    outline: none;
+  }
+}
+
 .signup{
   display: inline-block;
-  margin-left: 4vw;
+  margin-left: 2vw;
   font-family: 'Nixie One', sans-serif;
   
   & input{
   font-family: inherit !important;
+  &[type="submit"]{
+    background-color: $dark-orange  ;
+    color: white;
+    border: none;
+    font-size: 16pt;
+    font-family: 'Nixie One', sans-serif;
+    transition: all .2s ease-in-out;
+    &:hover{
+      color: black;
+      background-color: white;
+    }
+    }
   }
 }
 
-#signup-submit{
-      font-family: inherit !important;
-}
+
 
 .signup-text{
   margin-top: 2vh;

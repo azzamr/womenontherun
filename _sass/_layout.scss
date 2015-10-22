@@ -1,3 +1,5 @@
+$dark-orange: #ED5E4D;
+$light-orange: #F6984A;
 /**
  * Site header
  */
@@ -24,7 +26,20 @@
     }
 
     & img{
-        max-width: 240px;
+        max-width: 200px;
+    }
+}
+
+.social-icons{
+    display: inline-block;
+    font-size: 18pt;
+    vertical-align: top;
+    margin-top: 2vh;
+    margin-left: 4vw;
+    // background-color: $light-orange;
+    color: $dark-orange;
+    & a{
+        color: $dark-orange;
     }
 }
 

@@ -9,6 +9,15 @@
   margin-bottom: 20px;
 }
 
+.card-icon{
+  font-size: 24pt;
+  color: black;
+  background-color: $dark-orange;
+  position: absolute;
+  bottom: 0;
+  right: 12px;
+}
+
 #recent{
   vertical-align: top;
   box-sizing: border-box;
@@ -72,7 +81,7 @@
   width: 50%;
   list-style-type: none;
   & li{
-    width: 50%;
+    width: 70%;
     & a{
       color: black;
       &:visited{
@@ -94,5 +103,9 @@
     font-size: 24pt;
     background-color: $light-orange;
   }
+}
+
+.link{
+  background-color: #F2EFEF;
 }
 

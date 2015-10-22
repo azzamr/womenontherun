@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "wotr";
+  src:url(<%= asset_path "wotr.eot" %>);
+  src:url(<%= asset_path "wotr.eot?#iefix" %>) format("embedded-opentype"),
+    url(<%= asset_path "wotr.woff" %>) format("woff"),
+    url(<%= asset_path "wotr.ttf" %>) format("truetype"),
+    url(<%= asset_path "wotr.svg#wotr" %>) format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "wotr" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "wotr" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-social-facebook:before {
+  content: "a";
+}
+.icon-social-twitter:before {
+  content: "b";
+}
+.icon-social-instagram:before {
+  content: "c";
+}
+.icon-headphone:before {
+  content: "d";
+}
+.icon-comment-quotes:before {
+  content: "e";
+}
+.icon-newspaper:before {
+  content: "f";
+}
+.icon-link-external:before {
+  content: "g";
+}
+.icon-link:before {
+  content: "h";
+}
+.icon-mortar-board:before {
+  content: "i";
+}
