@@ -24,12 +24,38 @@ layout: home
          </li>
       {% endfor %}
       </ul>
+      <ul class="categories">
+        <li>
+          <a class="quotes-link" href="#">
+            <span class="cat-icon" data-icon="e"></span>
+            <span class="cat-text">Quotes</span>
+          </a>
+        </li>
+        <li>
+          <a class="articles-link" href="#">
+            <span class="cat-icon" data-icon="j"></span>
+            <span class="cat-text">What's going on?</span>
+          </a>
+        </li>
+        <li>
+          <a class="audio-link" href="#">
+            <span class="cat-icon" data-icon="d"></span>
+            <span class="cat-text">Listen to their stories</span>
+          </a>
+        </li>
+        <li>
+          <a class="links-link" href="#">
+            <span class="cat-icon" data-icon="f"></span>
+            <span class="cat-text">Read their stories</span>
+          </a>
+        </li>
+      </ul>
     </div>
 
-    {% for post in site.posts %}
+    {% for post in site.posts limit:5 %}
         {% if post.type == "article" %}
           <div class="card article">
-          <span class="card-icon" data-icon="f"></span>
+          <span class="card-icon" data-icon="j"></span>
         {% elsif post.type == "quote" %}
           <div class="card quote">
           <span class="card-icon" data-icon="e"></span>
@@ -41,10 +67,15 @@ layout: home
           <span class="card-icon" data-icon="i"></span>
         {% elsif post.type == "link" %}
           <div class="card link">
-          <span class="card-icon" data-icon="g"></span>
+          <span class="card-icon" data-icon="f"></span>
         {% endif %}
+        {% if post.type == "quote" %}
+          <h2><a href="{{ post.url | prepend: site.baseurl }}">"{{ post.quote }}"</a></h2>
+        {% else %}
         <a class="link-overlay" href="{{ post.url | prepend: site.baseurl }}" style="background-image: url({{post.image}});background-position:{{post.bgpos}}">{{post.title}}</a>
         <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+        {% endif %}
+
       </div>
     {% endfor %}
   </div>

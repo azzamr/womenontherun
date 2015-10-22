@@ -6,6 +6,11 @@ categories: jekyll update
 image: http://refugeediaries.com/wp-content/uploads/2015/06/20120531_Reich_027805.jpg
 bgpos: -150px 0px
 type: article
+twitter-card:
+og-type:
+og-title: "Women on the Run - the story"
+og-description:
+fb-app_id: 1718900588328720
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

@@ -27,6 +27,45 @@
   background-color: #f2efef;
 }
 
+.categories{
+  position: absolute;
+  bottom:0;
+  left: 0;
+  list-style-type: none;
+  margin-left: 0;
+  width: 80%;
+  & li{
+    background-color: $dark-orange;
+    color: black;
+    margin-bottom: 2px;
+    & a{
+      width:100%;
+      color: black;
+      &:visited{
+        color: black;
+      }
+      &:hover{
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.cat-text{
+  font-size: 14pt;
+  vertical-align: top;
+  text-decoration: none;
+}
+
+
+.cat-icon{
+  font-size: 16pt;
+  vertical-align: bottom;
+  margin-left: 5px;
+  text-decoration: none;
+}
+
 .link-overlay{
   display: block;
   background-size: cover;
@@ -84,6 +123,7 @@
     width: 70%;
     & a{
       color: black;
+
       &:visited{
         color: $dark-orange;
       }
@@ -92,16 +132,25 @@
 }
 
 .quote{
+  box-sizing: border-box;
+  padding: 20px;
   vertical-align: top;
   font-family: 'Nixie One', sans-serif;
-  background-color: #dddddd;
-  & p{
-    text-align: center;
-    position: relative;
-    top: 20%;
-    vertical-align: middle;
-    font-size: 24pt;
-    background-color: $light-orange;
+  background-color: $light-orange;
+  background-image: none;
+  & h2{
+    width: 100%;
+    height:100%;
+    text-align: justify;
+    font-size: 20pt;
+  }
+  & a{
+    width:100%;
+    height:100%;
+    color: black;
+    &:hover{
+
+    }
   }
 }
 

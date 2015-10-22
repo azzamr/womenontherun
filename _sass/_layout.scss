@@ -35,11 +35,15 @@ $light-orange: #F6984A;
     font-size: 18pt;
     vertical-align: top;
     margin-top: 2vh;
-    margin-left: 4vw;
+    margin-left: 2vw;
+    float:left;
     // background-color: $light-orange;
     color: $dark-orange;
     & a{
         color: $dark-orange;
+        &:hover{
+            color:black;
+        }
     }
 }
 
