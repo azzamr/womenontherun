@@ -17,42 +17,54 @@ layout: home
       </h2>
       <ul class="recent-posts">
       {% for post in site.posts %}
+       {% if post.type != "quote" and post.type != "can-do" %}
         <li>
           <a class="recent-link" href=
           "{{post.url | prepend:site.baseurl}}">
           {{post.title}}</a>
          </li>
+        {% endif %}
       {% endfor %}
       </ul>
       <ul class="categories">
+      <li>
+        <a class="all" href="#">
+          <span class="cat-icon" data-icon="k"></span>
+          <span class="cat-text">Show All</span>
         <li>
-          <a class="quotes-link" href="#">
+          <a class="quote" href="#">
             <span class="cat-icon" data-icon="e"></span>
             <span class="cat-text">Quotes</span>
           </a>
         </li>
         <li>
-          <a class="articles-link" href="#">
+          <a class="article" href="#">
             <span class="cat-icon" data-icon="j"></span>
             <span class="cat-text">What's going on?</span>
           </a>
         </li>
         <li>
-          <a class="audio-link" href="#">
+          <a class="audio" href="#">
             <span class="cat-icon" data-icon="d"></span>
             <span class="cat-text">Listen to their stories</span>
           </a>
         </li>
         <li>
-          <a class="links-link" href="#">
+          <a class="link" href="#">
             <span class="cat-icon" data-icon="f"></span>
             <span class="cat-text">Read their stories</span>
+          </a>
+        </li>
+        <li>
+          <a class="can-do" href="#">
+            <span class="cat-icon" data-icon="j"></span>
+            <span class="cat-text">What can I do?</span>
           </a>
         </li>
       </ul>
     </div>
 
-    {% for post in site.posts limit:5 %}
+    {% for post in site.posts %}
         {% if post.type == "article" %}
           <div class="card article">
           <span class="card-icon" data-icon="j"></span>
@@ -68,12 +80,29 @@ layout: home
         {% elsif post.type == "link" %}
           <div class="card link">
           <span class="card-icon" data-icon="f"></span>
+        {% elsif post.type == "can-do" %}
+          <div class="card can-do">
+            <span class="card-icon" data-icon="j"></span>
         {% endif %}
         {% if post.type == "quote" %}
           <h2><a href="{{ post.url | prepend: site.baseurl }}">"{{ post.quote }}"</a></h2>
         {% else %}
-        <a class="link-overlay" href="{{ post.url | prepend: site.baseurl }}" style="background-image: url({{post.image}});background-position:{{post.bgpos}}">{{post.title}}</a>
-        <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+        <a class="link-overlay"
+
+        {% if post.is-link %}
+          href="{{ post.is-link }}" target="_blank"
+        {% else %}
+          href="{{ post.url | prepend: site.baseurl }}"
+        {% endif %}
+           style="background-image: url({{post.image}});background-position:{{post.bgpos}}">{{post.title}}</a>
+
+        <h2><a class="post-link" 
+        {% if post.is-link %}
+          href="{{ post.is-link }}" target="_blank"
+        {% else %}
+          href="{{ post.url | prepend: site.baseurl }}"
+        {% endif %}
+        >{{ post.title }}</a></h2>
         {% endif %}
 
       </div>
