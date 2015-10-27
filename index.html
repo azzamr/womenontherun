@@ -12,20 +12,9 @@ layout: home
 
 
     <div class="card" id="recent">
-      <h2 class="recent-heading">
-        Recent Posts
-      </h2>
-      <ul class="recent-posts">
-      {% for post in site.posts %}
-       {% if post.type != "quote" and post.type != "can-do" %}
-        <li>
-          <a class="recent-link" href=
-          "{{post.url | prepend:site.baseurl}}">
-          {{post.title}}</a>
-         </li>
-        {% endif %}
-      {% endfor %}
-      </ul>
+      <p class="intro-text">
+        Tens of thousands of women are fleeing escalating violence in Mexico and the Central American Northern Triangle region of El Salvador, Guatemala and Honduras.  Here are their own stories, in their own words
+      </p>
       <ul class="categories">
       <li>
         <a class="all" href="#">

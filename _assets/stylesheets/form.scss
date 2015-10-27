@@ -1,4 +1,5 @@
 @import 'variables';
+$break-single: 500px;
 
 input{
   &:focus{
@@ -24,6 +25,15 @@ input{
       color: black;
       background-color: white;
     }
+    @media screen and (max-width: $break-single){
+      margin-left: 20%;
+      margin-top: 10%;
+    }
+    }
+  }
+  & label{
+    @media screen and (max-width: $break-single){
+      margin-left: 20%;
     }
   }
 }
