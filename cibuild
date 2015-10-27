@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -3 #halt script on error
 
-jekyll build
+bundle exec jekyll build
 
 if [ $TRAVIS_BRANCH == 'staging' ]; then
   s3_website push --config-dir ./script/staging
