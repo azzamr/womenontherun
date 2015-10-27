@@ -47,6 +47,22 @@ $light-orange: #F6984A;
     }
 }
 
+.footer-icons{
+    text-align: right;
+    clear:both;
+    font-size: 24pt;
+    vertical-align: top;
+    margin-right: 2vw;
+    color: $dark-orange;
+    & a{
+        color: $dark-orange;
+        &:hover{
+            color: black;
+        }
+    }
+}
+
+
 .site-nav {
     float: right;
     line-height: 56px;
