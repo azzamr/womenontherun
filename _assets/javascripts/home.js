@@ -3,15 +3,14 @@
 $(document).ready(function(){
   submitListener();
   categoryListener();
-})
+});
 
 function submitListener(){
-  var $form = $(".signup")
+  var $form = $(".signup");
 
   $form.submit(function(event){
     event.preventDefault();
     $('.submit-button').val('please wait...').prop('disabled',true);
-    var data = $form.serialize();
     $.ajax({
       type: 'POST',
       url: '//nyc.us11.list-manage.com/subscribe/post-json?u=7aa897cfc40f7cfbb83ffadd4&amp;id=710836cd94&c=?',
@@ -20,11 +19,11 @@ function submitListener(){
       cache: false,
       dataType: 'jsonp',
       contentType: "application/json; charset=utf-8",
-      error: function(err) {console.log("Error.")},
+      error: function(err) {console.log("Error.");},
 
       success: function(data){
 
-        if (data.result != "success") {
+        if (data.result !== "success") {
           console.log(data);
           $('.submit-button').val('Please Wait...').prop('disabled',true);
           $('#conf-message').html('').slideUp(700);
@@ -45,12 +44,10 @@ function submitListener(){
 }
 
 
-
 function categoryListener(){
   $(".categories").click(function(event){
     event.preventDefault();
     var category = $(event.target.closest('a')).attr("class");
-    
     if(category === "all"){
       showAll();
     }

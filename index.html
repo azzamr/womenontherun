@@ -7,7 +7,6 @@ layout: home
     <h1 class="banner-title">
   </div>
 
-
   <div class="posts">
 
 
@@ -53,6 +52,8 @@ layout: home
       </ul>
     </div>
 
+    
+
     {% for post in site.posts %}
 
         {% if post.type == "article" %}
@@ -73,10 +74,12 @@ layout: home
         {% elsif post.type == "can-do" %}
           <div class="card can-do">
             <span class="card-icon" data-icon="j"></span>
+        {% elsif post.type == "video" %}
+          <div class="card video" id="video">
         {% endif %}
         <div class="social-links">
-          <a class="facebook" data-icon="a"></a>
-          <a class="twitter" data-icon="b" href="https://twitter.com/intent/tweet?url={{post.url | prepend: site.baseurl}}"></a>
+          <a class="facebook" target="_blank" share_url="{{post.url}}" data-icon="a" href="http://www.facebook.com/sharer.php?appID=1718900588328720&link={{post.url}}" rel="nofollow"></a>
+          <a class="twitter" data-icon="b" href="https://twitter.com/intent/tweet?url={{post.url | prepend: site.url}}" target="_new"></a>
         </div>
         {% if post.type == "quote" %}
           <h2><a href="{{ post.url | prepend: site.baseurl }}">"{{ post.quote }}"</a></h2>
