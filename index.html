@@ -54,6 +54,7 @@ layout: home
     </div>
 
     {% for post in site.posts %}
+
         {% if post.type == "article" %}
           <div class="card article">
           <span class="card-icon" data-icon="j"></span>
@@ -73,6 +74,11 @@ layout: home
           <div class="card can-do">
             <span class="card-icon" data-icon="j"></span>
         {% endif %}
+        <div class="social-links">
+          <a class="facebook" data-icon="a" href="http://google.com"></a>
+          <a class="twitter" data-icon="b"></a>
+          <a class="instagram" data-icon="c" href="http://google.com"></a>
+        </div>
         {% if post.type == "quote" %}
           <h2><a href="{{ post.url | prepend: site.baseurl }}">"{{ post.quote }}"</a></h2>
         {% else %}
