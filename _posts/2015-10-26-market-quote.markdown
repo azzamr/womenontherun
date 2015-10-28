@@ -10,7 +10,7 @@ quote: "In the local market, the people from the cartel put a dead body of a wom
 twitter-card: "summary_large_image"
 og-type: 
 og-title: "In the local market..."
-og-description:
+og-description: In the local market, the people from the cartel put a dead body of a woman on public display to strike fear into everyone.
 fb-app_id: 1718900588328720
 ---
 
