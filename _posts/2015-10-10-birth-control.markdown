@@ -3,7 +3,7 @@ layout: post
 title:  ...they sought out birth control injections or pills before fleeing "So that if you are raped, you will not end up pregnant..."
 date:   2015-10-13 10:53:36
 categories: jekyll update
-image:
+image: 
 bgpos:
 type: quote
 quote: ...they sought out birth control injections or pills before fleeing "So that if you are raped, you will not end up pregnant..."
