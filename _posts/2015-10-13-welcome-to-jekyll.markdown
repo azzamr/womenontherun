@@ -1,25 +1,19 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "What's going on?"
 date:   2015-10-13 10:53:36
 categories: jekyll update
+image: http://refugeediaries.com/wp-content/uploads/2015/06/20120531_Reich_027805.jpg
+bgpos: -150px 0px
+type: article
+twitter-card:
+og-type:
+og-title: "Women on the Run - the story"
+og-description:
+fb-app_id: 1718900588328720
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+UNHCR has drafted a report on the women fleeing the Central American Northern Triangle – El Savador, Guatemala and Honduras. There is a surging tide of violence sweeping across the Northern Triangle forcing thousands of women, men and children to leave their homes every day. 
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+The Women on the Run Report tells first-hand accounts of 160 women/refugees fleeing unimaginable gang violence and brutal domestic violence. Transgender women, in particular, experience a further exacerbated level of violence – discrimination, beatings and attacks from family members, partners, clients or employers, and others. 
 
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
-
-[jekyll]:      http://jekyllrb.com
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-help]: https://github.com/jekyll/jekyll-help
+The countries of the Northern Triangle have basic structural challenges to rule of law, citizen security, and justice. As a result, the women cannot rely on the police for protection and many have a lack of trust in government institutions due to police collusion. They flee north because they have no choice. It is a matter of life and death.

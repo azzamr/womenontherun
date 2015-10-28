@@ -3,21 +3,105 @@ layout: home
 ---
 
 <div class="home">
+  <div class="banner">
+    <h1 class="banner-title">
+  </div>
 
-  <h1 class="page-heading">Posts</h1>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
+  <div class="posts">
+
+
+    <div class="card" id="recent">
+      <p class="intro-text">
+        Tens of thousands of women are fleeing escalating violence in Mexico and the Central American Northern Triangle region of El Salvador, Guatemala and Honduras.  Here are their own stories, in their own words
+      </p>
+      <ul class="categories">
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <a class="all" href="#">
+          <span class="cat-icon" data-icon="k"></span>
+          <span class="cat-text">Show All</span>
+        <li>
+          <a class="quote" href="#">
+            <span class="cat-icon" data-icon="e"></span>
+            <span class="cat-text">Quotes</span>
+          </a>
+        </li>
+        <li>
+          <a class="article" href="#">
+            <span class="cat-icon" data-icon="j"></span>
+            <span class="cat-text">What's going on?</span>
+          </a>
+        </li>
+        <li>
+          <a class="audio" href="#">
+            <span class="cat-icon" data-icon="d"></span>
+            <span class="cat-text">Listen to their stories</span>
+          </a>
+        </li>
+        <li>
+          <a class="link" href="#">
+            <span class="cat-icon" data-icon="f"></span>
+            <span class="cat-text">Read their stories</span>
+          </a>
+        </li>
+        <li>
+          <a class="can-do" href="#">
+            <span class="cat-icon" data-icon="j"></span>
+            <span class="cat-text">What can I do?</span>
+          </a>
+        </li>
+      </ul>
+    </div>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
+    {% for post in site.posts %}
+
+        {% if post.type == "article" %}
+          <div class="card article">
+          <span class="card-icon" data-icon="j"></span>
+        {% elsif post.type == "quote" %}
+          <div class="card quote">
+          <span class="card-icon" data-icon="e"></span>
+        {% elsif post.type == "audio" %}
+          <div class="card audio">
+          <span class="card-icon" data-icon="d"></span>
+        {% elsif post.type == "learn" %}
+          <div class="card learn">
+          <span class="card-icon" data-icon="i"></span>
+        {% elsif post.type == "link" %}
+          <div class="card link">
+          <span class="card-icon" data-icon="f"></span>
+        {% elsif post.type == "can-do" %}
+          <div class="card can-do">
+            <span class="card-icon" data-icon="j"></span>
+        {% endif %}
+        <div class="social-links">
+          <a class="facebook" data-icon="a" href="http://google.com"></a>
+          <a class="twitter" data-icon="b"></a>
+          <a class="instagram" data-icon="c" href="http://google.com"></a>
+        </div>
+        {% if post.type == "quote" %}
+          <h2><a href="{{ post.url | prepend: site.baseurl }}">"{{ post.quote }}"</a></h2>
+        {% else %}
+        <a class="link-overlay"
+
+        {% if post.is-link %}
+          href="{{ post.is-link }}" target="_blank"
+        {% else %}
+          href="{{ post.url | prepend: site.baseurl }}"
+        {% endif %}
+           style="background-image: url({{post.image}});background-position:{{post.bgpos}}">{{post.title}}</a>
+
+        <h2><a class="post-link" 
+        {% if post.is-link %}
+          href="{{ post.is-link }}" target="_blank"
+        {% else %}
+          href="{{ post.url | prepend: site.baseurl }}"
+        {% endif %}
+        >{{ post.title }}</a></h2>
+        {% endif %}
+
+      </div>
     {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  </div>
 
 </div>

@@ -1,36 +1,75 @@
+$dark-orange: #ED5E4D;
+$light-orange: #F6984A;
 /**
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
-    min-height: 56px;
-    padding: 0 2vw 0 2vw;
+    min-height: 80px;
+    width: 97%;
+    padding: 3vh 2vw 0 0.5vw;
 
     // Positioning context for the mobile navigation icon
     position: relative;
 }
 
 .site-title {
-    font-size: 26px;
+    font-size: 28pt;
     line-height: 56px;
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
+    font-family: 'Alfa Slab One', sans-serif;
 
     &,
     &:visited {
         color: $grey-color-dark;
     }
+
+    & img{
+        max-width: 200px;
+    }
 }
+
+.social-icons{
+    display: inline-block;
+    font-size: 18pt;
+    vertical-align: top;
+    margin-top: 2vh;
+    margin-left: 2vw;
+    float:left;
+    // background-color: $light-orange;
+    color: $dark-orange;
+    & a{
+        color: $dark-orange;
+        &:hover{
+            color:black;
+        }
+    }
+}
+
+.footer-icons{
+    text-align: right;
+    clear:both;
+    font-size: 24pt;
+    vertical-align: top;
+    margin-right: 2vw;
+    color: $dark-orange;
+    & a{
+        color: $dark-orange;
+        &:hover{
+            color: black;
+        }
+    }
+}
+
 
 .site-nav {
     float: right;
     line-height: 56px;
 
-    .menu-icon {
-        display: none;
-    }
+    // .menu-icon {
+    //     display: none;
+    // }
 
     .page-link {
         color: $text-color;
@@ -42,10 +81,10 @@
         }
     }
 
-    @include media-query($on-palm) {
+    // @include media-query($on-palm) {
         position: absolute;
-        top: 9px;
-        right: 30px;
+        top: 30px;
+        right: 0px;
         background-color: $background-color;
         border: 1px solid $grey-color-light;
         border-radius: 5px;
@@ -60,13 +99,9 @@
             padding-top: 10px;
             text-align: center;
 
-            > svg {
+            & img{
                 width: 18px;
                 height: 15px;
-
-                path {
-                    fill: $grey-color-dark;
-                }
             }
         }
 
@@ -84,7 +119,7 @@
             display: block;
             padding: 5px 10px;
         }
-    }
+    // }
 }
 
 

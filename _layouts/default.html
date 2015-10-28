@@ -1,8 +1,18 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    {% include head.html %}
+    {% include post-head.html %}
+    <meta property ="twitter:card" content="{{ page.twitter-card}}"/>
+    <meta property="og:url" content="{{ page.url | prepend: site.baseurl }}"/>
+    <meta property="og:title" content="{{ page.og-title }}"/>
+    <meta property="og:description" content="{{page.og-description}}"/>
+    <meta property="og:image" content="{{page.image}}"
+    <meta property="twitter:site" content="@UNRefugeeAgency"/>
+    <meta property="twitter:creator" content="@UNRefugeeAgency" />
 
-  {% include head.html %}
 
+  </head>
   <body>
 
     {% include header.html %}

@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -3 #halt script on error
+
+bundle exec jekyll build
+
+if [ $TRAVIS_BRANCH == 'staging' ]; then
+  s3_website push --config-dir ./script/staging
+elif [ $TRAVIS_BRANCH == 'live' ]; then
+  s3_website push --config-dir ./script/production
+else
+  echo 'Invalid branch. you can only publish from staging or live.'
+  exit 1
+fi 
