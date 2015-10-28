@@ -39,7 +39,10 @@ input{
 }
 
 
-
+.conf-message{
+  display: none;
+  width: 40%;
+}
 .signup-text{
   margin-top: 2vh;
   background-color: $light-orange;

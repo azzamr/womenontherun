@@ -6,8 +6,45 @@ $(document).ready(function(){
 })
 
 function submitListener(){
-  console.log("submit ready");
+  var $form = $(".signup")
+
+  $form.submit(function(event){
+    event.preventDefault();
+    $('.submit-button').val('please wait...').prop('disabled',true);
+    var data = $form.serialize();
+    $.ajax({
+      type: 'POST',
+      url: '//nyc.us11.list-manage.com/subscribe/post-json?u=7aa897cfc40f7cfbb83ffadd4&amp;id=710836cd94&c=?',
+      data: $form.serialize(),
+      timeout: 5000,
+      cache: false,
+      dataType: 'jsonp',
+      contentType: "application/json; charset=utf-8",
+      error: function(err) {console.log("Error.")},
+
+      success: function(data){
+
+        if (data.result != "success") {
+          console.log(data);
+          $('.submit-button').val('Please Wait...').prop('disabled',true);
+          $('#conf-message').html('').slideUp(700);
+          $('#conf-message').html("Something went wrong, please try to submit your details again.").slideDown(700, function(){
+            $('.submit-button').val('Raise Your Hand!').prop('disabled',false);
+          });
+        }
+
+        else {
+          console.log(data);
+            $('.signup').children().hide(400,function()
+              {$('#conf-message').html("Thanks! Please confirm your email address.").slideDown(700);
+          });
+        }
+      }
+    });
+  });
 }
+
+
 
 function categoryListener(){
   $(".categories").click(function(event){
@@ -35,13 +72,11 @@ function showAll(){
 
 function unhideCards(category){
   var cards = findToShow(category);
-  console.log("cards to unhide" + cards);
   reDisplay(cards);
 }
 
 function hideCards(category){
   var cards = findAll();
-  console.log("cards to hide" + cards);
   unDisplay(cards);
 }
 
@@ -68,14 +103,12 @@ function findToShow(category){
 function reDisplay(cards){
   $.each(cards,function(){
       $(this).show(500);
-      console.log("unhidden" + this);
   });
 }
 
 function unDisplay(cards){
   $.each(cards,function(){
       $(this).hide(500);
-      console.log("hidden" + this);
   });
 }
 

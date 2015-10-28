@@ -5,10 +5,11 @@
     <a class="site-title" href="{{ site.baseurl }}/">{%image logo.png alt:'Woment on the run.' %}</a>
     <form class="signup">
       <p class="signup-text">Sign up to learn more!</p>
+      <span id="conf-message"></span>
       <label>email<span class="asterix">*</span></label>
-      <input type="email" required>
+      <input type="email" name="EMAIL" required>
       <label>name<span class="asterix">*</span></label>
-      <input type="text" required>
+      <input type="text" name="NAME" required>
       <input type="submit" class="submit-button"></input>
     </form>
     <div class="social-icons">
