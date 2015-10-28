@@ -76,7 +76,7 @@ layout: home
         {% endif %}
         <div class="social-links">
           <a class="facebook" data-icon="a"></a>
-          <a class="twitter" data-icon="b"></a>
+          <a class="twitter" data-icon="b" href="https://url={{post.url | prepend: site.baseurl}}"></a>
         </div>
         {% if post.type == "quote" %}
           <h2><a href="{{ post.url | prepend: site.baseurl }}">"{{ post.quote }}"</a></h2>
