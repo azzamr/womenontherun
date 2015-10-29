@@ -39,7 +39,9 @@ input{
 }
 
 
-
+.conf-friends{
+  width: 40%;
+}
 .signup-text{
   margin-top: 2vh;
   background-color: $light-orange;
@@ -50,12 +52,34 @@ input{
 }
 
 .friends{
-  width: 60%;
+  width: 50%;
+  min-width: 300px;
   margin: auto;
+  font-family: 'Nixie One' , sans-serif;
   & label{
     margin-right: 3%;
-    width:40%;
+    width:60%;
     display: inline-block;
     text-align: right;
+    @media screen and (max-width: $break-single){
+      font-size: 10pt;
+    }
+  }
+  & input .friends-submit{
+    background-color: $dark-orange  ;
+    color: white;
+    border: none;
+    font-size: 16pt;
+    font-family: 'Nixie One', sans-serif;
+    transition: all .2s ease-in-out;
+    &:hover{
+      color: black;
+      background-color: white;
+    }
+    @media screen and (max-width: $break-single){
+      margin-left: 20%;
+      margin-top: 10%;
+    }
   }
 }
+

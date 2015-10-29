@@ -6,10 +6,10 @@ categories: jekyll update
 image: http://refugeediaries.com/wp-content/uploads/2015/06/20120531_Reich_027805.jpg
 bgpos: -150px 0px
 type: article
-twitter-card:
-og-type:
+twitter-card: summary_large_image
+og-type: 
 og-title: "Women on the Run - the story"
-og-description:
+og-description: UNHCR has drafted a report on the women fleeing the Central American Northern Triangle – El Savador, Guatemala and Honduras. There is a surging tide of violence sweeping across the Northern Triangle forcing thousands of women, men and children to leave their homes every day. 
 fb-app_id: 1718900588328720
 ---
 UNHCR has drafted a report on the women fleeing the Central American Northern Triangle – El Savador, Guatemala and Honduras. There is a surging tide of violence sweeping across the Northern Triangle forcing thousands of women, men and children to leave their homes every day. 

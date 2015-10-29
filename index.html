@@ -7,7 +7,6 @@ layout: home
     <h1 class="banner-title">
   </div>
 
-
   <div class="posts">
 
 
@@ -53,6 +52,8 @@ layout: home
       </ul>
     </div>
 
+    
+
     {% for post in site.posts %}
 
         {% if post.type == "article" %}
@@ -73,14 +74,17 @@ layout: home
         {% elsif post.type == "can-do" %}
           <div class="card can-do">
             <span class="card-icon" data-icon="j"></span>
+        {% elsif post.type == "video" %}
+          <div class="card video" id="video">
         {% endif %}
         <div class="social-links">
-          <a class="facebook" data-icon="a" href="http://google.com"></a>
-          <a class="twitter" data-icon="b"></a>
-          <a class="instagram" data-icon="c" href="http://google.com"></a>
+          <a class="facebook" target="_blank" share_url="{{post.url}}" data-icon="a" href="http://www.facebook.com/sharer.php?appID=1718900588328720&link={{post.url}}" rel="nofollow"></a>
+          <a class="twitter" data-icon="b" href="https://twitter.com/intent/tweet?url={{post.url | prepend: site.url}}" target="_new"></a>
         </div>
         {% if post.type == "quote" %}
           <h2><a href="{{ post.url | prepend: site.baseurl }}">"{{ post.quote }}"</a></h2>
+        {% elsif post.type == "audio" %}
+          <iframe width="100%" height="400" scrolling="no" frameborder="yes" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{post.sound}}&amp;auto_play=false&amp;hide_related=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
         {% else %}
         <a class="link-overlay"
 
