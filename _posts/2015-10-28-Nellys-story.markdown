@@ -1,16 +1,16 @@
 ---
 layout: post
 title:  "Maria's story"
-date:   2025-10-13 10:53:36
+date:   2025-10-29 16:54:00
 categories: jekyll update
 image: 
 bgpos: 
 type: audio
-sound: 230474298
+sound: 230685845
 twitter-card: summary_large_image
 og-type:
-og-title: "Listen to Maria's story"
-og-description: Listen to Maria's story
+og-title: "Nelly's story"
+og-description: Listen to Nelly's story
 fb-app_id: 1718900588328720
 ---
 
