@@ -3,7 +3,7 @@ layout: post
 title:  "Download the executive summary"
 date:   2015-10-13 10:53:36
 categories: jekyll update
-image: /images/cover.jpg
+image: /images/exec.jpg
 bgpos:
 og-title: "Women on the run executive summary"
 og-description: Read the women on the run executive summary

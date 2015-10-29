@@ -11,23 +11,25 @@ layout: default
     {{ content }}
   </article>
 
-  <form class="signup friends">
+  <form class="friends">
+    <p class="conf-friends"></p>
     <label>Your Name<span class="asterix">*</span></label>
-    <input type="text" required>
+    <input type="text" name="NAME" required>
     <label>Your email address<span class="asterix">*</span></label>
-    <input type="email" required>
+    <input type="email" name="EMAIL" required>
     <label>Friend name 1<span class="asterix">*</span></label>
-    <input type="text" required>
+    <input type="text" name="F1NAME" required>
     <label>Friend email 1<span class="asterix">*</span></label>
-    <input type="email" required>
+    <input type="email" name="F1EMAIL" required>
     <label>Friend name 2</label>
-    <input type="text">
+    <input type="text" name="F2NAME">
     <label>Friend email 2</label>
-    <input type="email">
+    <input type="email" name="F2EMAIL">
     <label>Friend name 3</label>
-    <input type="text">
+    <input type="text" name="F3NAME">
     <label>Friend email 3</label>
-    <input type="email">
+    <input type="email" name="F3EMAIL">
+    <input type="submit" class="friends-submit">
   </form>
 
 </div>

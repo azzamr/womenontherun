@@ -83,6 +83,8 @@ layout: home
         </div>
         {% if post.type == "quote" %}
           <h2><a href="{{ post.url | prepend: site.baseurl }}">"{{ post.quote }}"</a></h2>
+        {% elsif post.type == "audio" %}
+          <iframe width="100%" height="400" scrolling="no" frameborder="yes" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{post.sound}}&amp;auto_play=false&amp;hide_related=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
         {% else %}
         <a class="link-overlay"
 
