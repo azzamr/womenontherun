@@ -75,7 +75,10 @@ layout: home
           <div class="card can-do">
             <span class="card-icon" data-icon="j"></span>
         {% elsif post.type == "video" %}
-          <div class="card video" id="video">
+          <div class="card video">
+            <span class="card-icon" data-icon="m"></span>
+        {% elsif post.type == "infographic" %}
+          <div class="card infographic">
         {% endif %}
         <div class="social-links">
           <a class="facebook" target="_blank" share_url="{{post.url}}" data-icon="a" href="http://www.facebook.com/sharer.php?appID=1718900588328720&link={{post.url}}" rel="nofollow"></a>
@@ -88,20 +91,26 @@ layout: home
         {% else %}
         <a class="link-overlay"
 
-        {% if post.is-link %}
-          href="{{ post.is-link }}" target="_blank"
-        {% else %}
-          href="{{ post.url | prepend: site.baseurl }}"
-        {% endif %}
-           style="background-image: url({{post.image}});background-position:{{post.bgpos}}">{{post.title}}</a>
+          {% if post.is-link %}
+            href="{{ post.is-link }}" target="_blank"
+          {% else %}
+            href="{{ post.url | prepend: site.baseurl }}"
+          {% endif %}
+            style="background-image: url({{post.image}});background-position:{{post.bgpos}}">{{post.title}}</a>
 
-        <h2><a class="post-link" 
-        {% if post.is-link %}
-          href="{{ post.is-link }}" target="_blank"
-        {% else %}
-          href="{{ post.url | prepend: site.baseurl }}"
-        {% endif %}
-        >{{ post.title }}</a></h2>
+          <h2><a class="post-link" 
+          {% if post.is-link %}
+            href="{{ post.is-link }}" target="_blank">
+          {% else %}
+            href="{{ post.url | prepend: site.baseurl }}">
+          {% endif %}
+
+          {% if post.type !="infographic" %}
+            {{ post.title }}</a></h2>
+          {% else %}
+            </a></h2>
+          {% endif %}
+
         {% endif %}
 
       </div>

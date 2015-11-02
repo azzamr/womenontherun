@@ -211,3 +211,9 @@ $break-single: 500px;
   font-size: 10pt;
   margin-left: 10px;
 }
+
+.infographic{
+  & h2 .post-link{
+    opacity: 0;
+  }
+}
