@@ -83,7 +83,7 @@ layout: home
         {% endif %}
         <div class="social-links">
           <a class="facebook" target="_blank" data-icon="a" href="https://www.facebook.com/sharer/sharer.php?u={{post.url | prepend: site.url | cgi_escape}}"></a>
-          <a class="twitter" data-icon="b" href="https://twitter.com/intent/tweet?url={{post.url | prepend: site.url}}" target="_new"></a>
+          <a class="twitter" data-icon="b" href="https://twitter.com/intent/tweet?url={{post.url | prepend: site.url | url_encode }}&text={{ post.title | url_encode }}%20%23womenontherun%20&" target="_new"></a>
         </div>
         {% if post.type == "quote" %}
           <h2><a href="{{ post.url | prepend: site.baseurl }}">"{{ post.quote }}"</a></h2>
