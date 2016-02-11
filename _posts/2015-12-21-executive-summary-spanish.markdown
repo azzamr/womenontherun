@@ -7,7 +7,7 @@ image: /images/exec.jpg
 bgpos:
 og-title: "Resumen Ejecutivo"
 og-description: Lea el Resumen Ejecutivo
-is-link: http://www.unhcrwashington.org/sites/default/files/Women%20on%20the%20Run%20Executive%20Summary%20ENG%20for%20Web%20Nov%202015.pdf
+is-link: http://www.unhcrwashington.org/sites/default/files/Women%20on%20the%20Run%20Executive%20Summary_Spanish.pdf
 type: link
 ---
 
