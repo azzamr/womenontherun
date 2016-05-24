@@ -10,8 +10,8 @@ twitter-card: summary_large_image
 og-type: 
 og-title: "Lea el hoja de hechos"
 og-description: "Lea el hoja de hechos"
-is-link: http://www.unhcrwashington.org/sites/default/files/Women%20on%20the%20Run%20Factsheet_OCT2015%20SPAN%2026%20OCT.pdf
+is-link: http://www.unhcr.org/en-us/about-us/background/56fc32197/women-on-the-run-fact-sheet-spanish.html
 fb-app_id: 1718900588328720
 ---
 
-<a href="http://www.unhcrwashington.org/sites/default/files/Women%20on%20the%20Run%20Factsheet_OCT2015%20SPAN%2026%20OCT.pdf" target="_blank">Lea el hoja de hechos.</a>
+<a href="{ page.is-link }" target="_blank">Lea el hoja de hechos.</a>

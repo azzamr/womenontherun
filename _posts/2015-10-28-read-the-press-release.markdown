@@ -10,8 +10,8 @@ twitter-card: summary_large_image
 og-type:
 og-title: "Women on the Run - press release"
 og-description: Women on the run press release
-is-link: http://www.unhcrwashington.org/media-news/press-releases/unhcr-warns-looming-refugee-crisis-women-flee-central-america-and-mexico
+is-link: http://www.unhcr.org/en-us/news/press/2015/10/5630c2046/unhcr-warns-looming-refugee-crisis-women-flee-central-america-mexico.html
 fb-app_id: 1718900588328720
 ---
 
-<a href="http://www.unhcrwashington.org/media-news/press-releases/unhcr-warns-looming-refugee-crisis-women-flee-central-america-and-mexico" target="_blank">Read the press release</a>
+<a href="{ page.is-link }" target="_blank">Read the press release</a>
